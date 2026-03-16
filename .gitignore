@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+.env
+
+# Data (too large for git)
+data/
+datasets/
+*.csv
+*.jsonl
+*.json
+!config/*.yaml
+
+# Model checkpoints
+models/
+*.pt
+*.bin
+*.ckpt
+
+# Results (regenerable)
+results/
+experiments/
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.synctex.gz
+paper/*.cut
