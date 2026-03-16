@@ -4,23 +4,24 @@ __pycache__/
 .DS_Store
 .env
 
-# Data (too large for git)
-data/
-datasets/
+# Data files (too large for git)
+/data/
+/datasets/
 *.csv
 *.jsonl
 *.json
 !config/*.yaml
 
 # Model checkpoints
-models/
+/models/
 *.pt
 *.bin
 *.ckpt
 
 # Results (regenerable)
-results/
-experiments/
+/results/
+/experiments/
+/artifacts/
 
 # LaTeX build artifacts
 paper/*.aux

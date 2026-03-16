@@ -30,8 +30,8 @@ python scripts/train_baselines.py --variant full_feature
 ### Training neural models
 
 ```bash
-# Context-only encoder (mBERT)
-python scripts/train_context.py --variant mbert_context
+# Context-only encoder (XLM-RoBERTa)
+python scripts/train_context.py --variant context_only_xlmr
 
 # Dual encoder with concatenation fusion
 python scripts/train_dual.py --variant dual_concat
@@ -60,11 +60,11 @@ done
 
 Hyperparameters are in `config/training.yaml`:
 
-- **Epochs:** 10
+- **Epochs:** 20
 - **Batch size:** 16
 - **Learning rate:** 2e-5
-- **Early stopping patience:** 3
-- **Transformer:** `bert-base-multilingual-cased`
+- **Early stopping patience:** 7
+- **Transformer:** `xlm-roberta-base`
 - **Fusion:** gated
 
 Kazakh suffix inventory used for morphological feature extraction is defined in `config/kaz_suffixes.yaml`.

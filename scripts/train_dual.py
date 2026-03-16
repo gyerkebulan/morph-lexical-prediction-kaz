@@ -573,7 +573,7 @@ def main():
     freeze_top_n = args.unfreeze_layers or config.get("freeze_transformer_except_top_n", 2)
     use_class_weights = config.get("use_class_weights", True)
     label_smoothing_sigma = config.get("label_smoothing_sigma", 0.5)
-    transformer_model = args.transformer_model or config.get("transformer_model", "bert-base-multilingual-cased")
+    transformer_model = args.transformer_model or config.get("transformer_model", "xlm-roberta-base")
     if args.loss_type in {"focal", "emd"} and not use_ordinal and label_smoothing_sigma > 0:
         logger.info(f"Disabling label smoothing because {args.loss_type} loss is enabled")
         label_smoothing_sigma = 0.0
