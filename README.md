@@ -1,10 +1,5 @@
 # CEFR-based Morphology-Aware Lexical Complexity Prediction for Kazakh
 
-### [Paper](paper/ref_paper.tex)
-
-> **CEFR-based Morphology-Aware Lexical Complexity Prediction for Kazakh Language**<br>
-> Anonymous<br>
-> ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP), 2026
 
 ## Abstract
 CEFR-graded lexical resources and lexical complexity prediction remain limited for low-resource Turkic languages, leaving it unclear how well existing approaches transfer to agglutinative settings. We introduce the first CEFR-graded lexicon for Kazakh, containing 4,561 lemma–POS entries across A1–C1, and use it to test whether explicit morphology improves lexical complexity prediction. We compare handcrafted morphological features, contextual embeddings, and models that combine both signal types on held-out CEFR classification. Our results show that morphology provides useful information beyond character-level lexical cues, contextual representations are strong on their own, and dual-encoder models that combine morphology with context achieve the best overall performance.
@@ -15,17 +10,6 @@ CEFR-graded lexical resources and lexical complexity prediction remain limited f
 conda env create -f environment.yml
 conda activate kazakh_cefr_env
 ```
-
-## Data
-
-Place `kaz_lexicon.csv` in `data/raw/` with the following schema:
-
-| Column | Type | Example |
-|--------|------|---------|
-| `lemma` | str | кітап |
-| `pos` | str | NOUN |
-| `cefr` | str | A1 |
-| `freq` | int | 5432 |
 
 ## Usage
 
